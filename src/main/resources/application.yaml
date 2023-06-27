@@ -21,3 +21,10 @@ spring:
       enabled: true
       path: /h2-console
       settings.trace: false
+      
+      
+marvel:
+  url-base: https://gateway.marvel.com:443/v1/public/characters
+  apikey: 831197e178cd630551c03e6b9b8e1c65
+  hash: d0153cecda67869bf2b554fe2dd18b63
+  ts: 1

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.*;
 
 import com.globant.dto.ResponseDto;
+import com.globant.entity.Bitacora;
 import com.globant.service.MarvelService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -45,6 +46,19 @@ public class MarvelController {
 		log.info("Calling getMarvelCharacterByCharacter...");
 		
 		return service.getMarvelCharactersByCharacter(character);
+		
+		
+	}
+	
+	
+	@GetMapping(value = "/public/bitacora", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+	public Iterable<Bitacora> getBitacora() {
+		
+		log.info("Calling getBitacora...");
+		
+		return service.getBitacora();
 		
 		
 	}
